@@ -1,0 +1,10 @@
+output/
+.tools/
+evidence/
+.test-output/
+evidence/*-kit/
+evidence/official-kit.tar.gz
+evidence/transcripts*.tar.gz
+evidence/session*.jsonl
+.env
+*keypair*.json
