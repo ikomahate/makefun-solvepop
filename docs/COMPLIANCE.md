@@ -8,11 +8,11 @@ creativity, make.fun promotion, packaging. Local files cannot replace a real coi
 
 | Requirement | Preparation status |
 | --- | --- |
-| Original agent-authored logo | Generated in main.ts, visually inspected; 512 x 512 RGBA PNG, 5786 bytes |
+| Original agent-authored logo | New pinata artwork generated in main.ts, visually inspected; 512 x 512 RGBA PNG, 7329 bytes |
 | Logo <= 5 MiB and <= 16 megapixels | Passed; PNG structure, chunk CRCs and compressed scanlines tested |
-| Name, ticker and story | BOT GOT PAID / BOTPAY finalized as this candidate; collision and similarity risks documented |
+| Name, ticker and story | PROBLEM PINATA / SOLVEPOP; five-concept comparison and limited collision screening documented |
 | Website and full description link | Exact bounty URL present in metadata.draft.json |
-| Bounty attribution and make.fun explanation | Present in description; fictional receipt clearly identified |
+| Bounty attribution and make.fun explanation | Present in description; pinata explicitly a metaphor with no payout promise |
 | Public image URI in actual launched metadata | Missing intentionally; local image filename is a draft only |
 | main.ts, Node 22, standard library only | Implemented; runs under portable Node 22.23.5 and Node 26.12.1 |
 | Offline deterministic execution | Two isolated runs compared in tests under Node permissions |
@@ -21,8 +21,8 @@ creativity, make.fun promotion, packaging. Local files cannot replace a real coi
 | Entrant-owned public repository created after opening | Local Git repository only; remote creation/ownership unverified |
 | Required README live badges | Competition badge present; rank/reward need actual owner/repository; local helper prepared |
 | GitHub About and wallet owner proof if applicable | Pending actual account/repository |
-| Genuine native development sessions | Official bundle created locally from two native Codex sessions; no hand-written transcript |
-| Run record | Official local check passed for opening prompt, harness, model, usage and tool declarations |
+| Genuine native development sessions | Native logs and prior Git commits preserved; final bundle includes the rebrand sessions |
+| Run record | Official bundler derives the original prompt and harness data; current result in evidence/official-check.json |
 | Recorded revisions and tests | Real writes, execution, validation changes and test results in native sessions |
 | Exact pinned sandbox container | Not run: Docker unavailable; Windows Node tests do not prove Linux container behavior |
 | Linked wallet and funded launch capacity | Unverified; wallet secrets never accessed |

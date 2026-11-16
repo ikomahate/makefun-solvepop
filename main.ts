@@ -9,8 +9,8 @@ const output = resolve(process.env.MAKEFUN_OUTPUT_DIR ?? join(root, 'output'));
 const prepare = process.argv.includes('--prepare');
 const website = 'https://make.fun/bounty/makefun-coin-promo-01';
 const metadata = {
-  name: 'BOT GOT PAID', symbol: 'BOTPAY',
-  description: 'You prompted. It clocked in. make.fun posted the bounty. BOTPAY is the meme of AI getting its first job: people and AI agents build software for cash rewards on make.fun, a coding bounty competition platform. Created for the make.fun coin-promotion bounty: ' + website + ' Community-created meme token; no make.fun affiliation, ownership or reward rights. The robot receipt is fictional, not proof of earnings.',
+  name: 'PROBLEM PINATA', symbol: 'SOLVEPOP',
+  description: 'The prize is inside the problem. Meet the Problem Pinata: bring your AI, crack a make.fun coding bounty, and compete for the prize. make.fun is a coding bounty competition platform where people and AI agents build software for cash rewards. This pinata holds a challenge: working code earns its shot at the prize. Created for the make.fun coin-promotion bounty: ' + website + ' Community-created meme token; no make.fun affiliation or reward rights. The pinata is a metaphor, not a payout promise.',
   website, image: 'logo.png',
 };
 
@@ -18,9 +18,11 @@ type Color = readonly [number, number, number];
 const size = 512;
 const pixels = Buffer.alloc(size * size * 4);
 const ink: Color = [15, 23, 42];
-const mint: Color = [92, 245, 177];
+const mint: Color = [87, 239, 202];
 const paper: Color = [255, 247, 224];
-const coral: Color = [255, 129, 119];
+const coral: Color = [255, 101, 125];
+const violet: Color = [151, 101, 255];
+const gold: Color = [255, 209, 84];
 function pixel(x: number, y: number, color: Color) {
   if (x < 0 || y < 0 || x >= size || y >= size) return;
   const i = (y * size + x) * 4;
@@ -48,27 +50,81 @@ function roundRect(x: number, y: number, w: number, h: number, r: number, color:
     for (const yy of [y + r, y + h - r - 1]) circle(xx, yy, r, color);
 }
 
+type Point = readonly [number, number];
+function polygon(points: Point[], color: Color | ((x: number, y: number) => Color)) {
+  const top = Math.max(0, Math.floor(Math.min(...points.map(p => p[1]))));
+  const bottom = Math.min(size - 1, Math.ceil(Math.max(...points.map(p => p[1]))));
+  for (let y = top; y <= bottom; y++) {
+    const hits: number[] = [];
+    for (let i = 0; i < points.length; i++) {
+      const a = points[i], b = points[(i + 1) % points.length];
+      if ((a[1] <= y + 0.5 && b[1] > y + 0.5) || (b[1] <= y + 0.5 && a[1] > y + 0.5))
+        hits.push(a[0] + (y + 0.5 - a[1]) * (b[0] - a[0]) / (b[1] - a[1]));
+    }
+    hits.sort((a, b) => a - b);
+    for (let i = 0; i + 1 < hits.length; i += 2)
+      for (let x = Math.max(0, Math.ceil(hits[i])); x < Math.min(size, hits[i + 1]); x++)
+        pixel(x, y, typeof color === 'function' ? color(x, y) : color);
+  }
+}
+function star(radius: number, inner: number): Point[] {
+  return Array.from({ length: 14 }, (_, i) => {
+    const angle = -Math.PI / 2 + i * Math.PI / 7;
+    const r = i % 2 ? inner : radius;
+    return [256 + Math.cos(angle) * r, 231 + Math.sin(angle) * r] as Point;
+  });
+}
+
+// Seven-point paper pinata, a code-shaped crack, and the prize revealed inside.
 rect(0, 0, size, size, ink);
-circle(256, 256, 228, mint);
-circle(256, 256, 213, ink);
-rect(249, 81, 14, 55, paper);
-circle(256, 78, 18, coral);
-roundRect(91, 167, 42, 76, 13, paper);
-roundRect(379, 167, 42, 76, 13, paper);
-roundRect(123, 125, 266, 168, 35, mint);
-roundRect(154, 155, 204, 104, 24, ink);
-circle(197, 196, 15, paper);
-circle(315, 196, 15, paper);
-line(227, 229, 256, 240, 5, mint);
-line(256, 240, 285, 229, 5, mint);
-roundRect(162, 273, 188, 158, 8, paper);
-for (let y = 273; y < 305; y++) rect(318, y, y - 272, 1, coral);
-rect(187, 298, 105, 8, ink);
-rect(187, 318, 72, 6, ink);
-line(208, 363, 241, 391, 9, ink);
-line(241, 391, 306, 345, 9, ink);
-circle(149, 326, 24, mint);
-circle(363, 326, 24, mint);
+circle(256, 235, 215, [23, 35, 59]);
+line(256, 14, 256, 62, 4, paper);
+polygon(star(192, 117), ink);
+polygon(star(179, 106), (_x, y) => [coral, gold, mint, violet][Math.floor(y / 36) % 4]);
+// Short fringe cuts sell the paper construction without small lettering.
+for (const y of [124, 160, 196, 268, 304, 340])
+  for (let x = 190; x <= 320; x += 18) line(x, y, x, y + 7, 1, ink);
+polygon([[245, 93], [271, 157], [253, 192], [281, 230], [253, 271],
+  [271, 314], [242, 370], [247, 296], [222, 256], [242, 215], [225, 169]], ink);
+polygon([[256, 167], [318, 232], [256, 305], [194, 232]], ink);
+// Trophy emerges through the opening; code brackets flank it.
+line(224, 215, 211, 215, 5, gold);
+line(211, 215, 213, 240, 5, gold);
+line(213, 240, 232, 248, 5, gold);
+line(286, 215, 300, 215, 5, gold);
+line(300, 215, 298, 240, 5, gold);
+line(298, 240, 279, 248, 5, gold);
+polygon([[226, 204], [284, 204], [280, 247], [268, 261], [242, 261], [230, 247]], gold);
+rect(248, 257, 14, 27, gold);
+roundRect(230, 280, 51, 10, 3, gold);
+line(237, 216, 237, 234, 3, paper);
+line(184, 213, 165, 231, 5, ink);
+line(165, 231, 184, 249, 5, ink);
+line(328, 213, 347, 231, 5, ink);
+line(347, 231, 328, 249, 5, ink);
+// A code cursor is the party stick: solve the challenge to reach the prize.
+line(106, 372, 170, 303, 10, ink);
+line(106, 372, 170, 303, 5, paper);
+polygon([[160, 284], [193, 296], [176, 321]], mint);
+for (const [x, y, color] of [[77, 153, coral], [419, 122, gold], [416, 331, mint]] as const)
+  rect(x, y, 10, 18, color);
+circle(107, 90, 5, mint); circle(389, 376, 5, coral);
+
+// Original bitmap lettering, not a copied official logo.
+const glyphs: Record<string, string[]> = {
+  M: ['10001','11011','10101','10101','10001','10001','10001'],
+  A: ['01110','10001','10001','11111','10001','10001','10001'],
+  K: ['10001','10010','10100','11000','10100','10010','10001'],
+  E: ['11111','10000','10000','11110','10000','10000','11111'],
+  '.': ['00000','00000','00000','00000','00000','00100','00100'],
+  F: ['11111','10000','10000','11110','10000','10000','10000'],
+  U: ['10001','10001','10001','10001','10001','10001','01110'],
+  N: ['10001','11001','11001','10101','10011','10011','10001'],
+};
+for (const [i, char] of [...'MAKE.FUN'].entries())
+  glyphs[char].forEach((row, y) => [...row].forEach((bit, x) => {
+    if (bit === '1') rect(115 + i * 36 + x * 6, 442 + y * 6, 6, 6, paper);
+  }));
 
 function crc32(bytes: Buffer) {
   let crc = 0xffffffff;

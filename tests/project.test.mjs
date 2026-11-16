@@ -9,7 +9,7 @@ import { inflateSync, crc32 } from 'node:zlib';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 function fixture(t) {
-  const dir = mkdtempSync(join(tmpdir(), 'botpay-test-'));
+  const dir = mkdtempSync(join(tmpdir(), 'solvepop-test-'));
   const bot = join(dir, 'bot'); const output = join(dir, 'output');
   mkdirSync(bot); mkdirSync(output);
   t.after(() => rmSync(dir, { recursive: true, force: true }));
@@ -62,7 +62,12 @@ test('metadata contains the required promotion and matches root generated copies
   assert.ok(m.description.includes(m.website));
   assert.match(m.description, /Created for the make.fun coin-promotion bounty/);
   assert.match(m.description, /coding bounty competition platform/);
-  assert.equal(m.symbol, 'BOTPAY'); assert.equal(m.image, 'logo.png');
+  assert.equal(m.name, 'PROBLEM PINATA'); assert.equal(m.symbol, 'SOLVEPOP');
+  assert.match(m.description, /^The prize is inside the problem\./);
+  assert.match(m.description, /people and AI agents/);
+  assert.match(m.description, /compete for the prize/);
+  assert.doesNotMatch(JSON.stringify(m), /BOTPAY|BOT GOT PAID/);
+  assert.equal(m.image, 'logo.png');
   for (const file of ['logo.png', 'metadata.draft.json'])
     assert.deepEqual(readFileSync(join(root, file)), readFileSync(join(f.output, file)));
 });

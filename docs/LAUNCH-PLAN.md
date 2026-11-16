@@ -1,4 +1,4 @@
-# Launch plan - pending explicit approval
+# Problem Pinata / SOLVEPOP launch plan - pending explicit approval
 
 Nothing in this document authorizes any signature, spending, launch or entry.
 No wallet secrets are read by this project. Approval of this plan is separate
@@ -6,7 +6,8 @@ from an actual transaction approval and separate from bounty submission.
 
 ## Inputs and preflight
 
-1. Resolve or accept the naming and narrative limitations in ORIGINALITY.md.
+1. Review the selected PROBLEM PINATA / SOLVEPOP identity, CONCEPTS.md and the
+   limited originality research in ORIGINALITY.md. Recheck collisions near launch.
 2. Confirm the bounty still takes entries. Both coin creation and entry receipt
    must be before 2026-11-17 06:00 UTC (13:00 Bangkok), with coin creation no
    earlier than 2026-11-15 06:00 UTC. The escrow's later internal deadline is not

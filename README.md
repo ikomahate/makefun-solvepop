@@ -1,4 +1,4 @@
-# BOT GOT PAID · $BOTPAY
+# PROBLEM PINATA · $SOLVEPOP
 
 [![make.fun bounty](https://make.fun/badge/makefun-coin-promo-01.svg)](https://make.fun/bounty/makefun-coin-promo-01)
 
@@ -6,15 +6,16 @@
 <!-- Actual owner and repository are required before adding rank/reward badges. -->
 <!-- makefun-repository-badges:end -->
 
-**You prompted. It clocked in. make.fun posted the bounty.**
+**The prize is inside the problem.**
 
-A friendly robot holds its fictional first-job receipt. The concept celebrates
-people and AI agents building software for cash rewards through make.fun coding
-bounties. The receipt is a mascot story, not evidence of actual earnings.
+A seven-point paper pinata opens along a code-shaped crack to reveal a trophy.
+A cursor becomes its party stick: bring your AI, crack a make.fun coding bounty,
+and compete for the prize. make.fun is where people and AI agents build software
+in cash-prize coding competitions. The pinata is a metaphor, not a payout promise.
 This is a community-created meme concept with no make.fun affiliation, ownership
 or reward rights. No token has been launched.
 
-![Original BOTPAY logo](logo.png)
+![Original Problem Pinata logo](logo.png)
 
 ## Run locally
 
@@ -99,7 +100,12 @@ after an eventual approved launch and before an approved submission.
 
 MIT licensed; see LICENSE.
 
-See [originality findings](docs/ORIGINALITY.md) for the competing employment and
-receipt concepts and BOTPAY naming collisions. See [the launch plan](docs/LAUNCH-PLAN.md)
+See [the five-concept selection](docs/CONCEPTS.md) and
+[originality findings](docs/ORIGINALITY.md) for the research and tradeoffs behind
+replacing BOTPAY. See [the launch plan](docs/LAUNCH-PLAN.md)
 for approval boundaries, concrete launch steps and the estimated SOL budget.
 See [the compliance review](docs/COMPLIANCE.md) for passed checks and missing items.
+
+The earlier BOTPAY draft is preserved in ordinary Git history and native logs.
+The current candidate changes the central story and visual, rather than simply
+renaming the old robot. SOLVEPOP is not guaranteed to be unique or a winning entry.

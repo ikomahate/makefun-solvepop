@@ -1,4 +1,50 @@
-# Originality assessment
+# Originality assessment: Problem Pinata / SOLVEPOP
+
+The user authorized replacing the BOTPAY draft after its originality review.
+The old identity and artwork remain in Git history, including commit 3e7bd8e,
+and in unchanged native development transcripts. No history was reset or rewritten.
+
+## Current research and limits
+
+The November 16, 2026 official development snapshot contains 325 entries. Every
+advertised title was reviewed and the leading five official image previews were
+visually inspected. None of those titles matched pinata or the chosen name/ticker.
+Employment, receipts, certificates, wanted posters and escrow themes were crowded.
+Individual pump.fun competitor pages were inaccessible through the web tool, so
+this is a comparison of observed titles/previews, not every full description.
+
+Searches for "PROBLEM PINATA", "PROBLEM PIÑATA", "SOLVEPOP" and "SOLVAPOP"
+returned no relevant exact-match competing coin in the results available to this
+session. Absence from those results proves neither uniqueness nor name availability.
+Earlier candidate ticker names CodeBash, BriefBash and TaskBash were rejected
+after searches found existing products/software with those names.
+Existing names checked: https://www.codebash.co.uk/ and https://briefbash.com/ .
+Generic pinata tokens and the Pinata storage company exist. No affiliation with
+them or make.fun is claimed; no trademark clearance was performed.
+
+Current source: https://make.fun/api/competitions/makefun-coin-promo-01/leaderboard .
+Raw evidence: evidence/leaderboard-current.json, evidence/field-current.json and
+evidence/competitor-1.webp through competitor-5.webp. These research images are
+ignored by Git and are not inputs to the logo generator.
+
+## Independent artwork and stronger positioning
+
+The pinata's seven-point silhouette, paper stripes/fringe, crack, code brackets,
+cursor-stick, trophy and bitmap lettering are drawn directly in main.ts with
+Node's standard library. No competitor image was copied, traced or embedded.
+The new story makes the problem itself the mascot: the prize is inside it and
+working code earns a chance at that prize. This expresses make.fun's coding
+competition value more directly than a generic robot holding its first receipt.
+
+CONCEPTS.md compares five alternatives across all five requested dimensions and
+records the qualitative choice. No judge scores or winner probabilities were
+invented. Underrepresentation is an inference limited to the sampled field.
+First-place potential, worldwide comprehension and buyer demand remain unproven.
+
+## Retired BOTPAY assessment (historical record)
+
+The text below describes the superseded draft and its earlier 323-entry snapshot.
+It is retained for context; it is not the current identity or current recommendation.
 
 Final development identity: **BOT GOT PAID / BOTPAY**. This preserves the user's
 chosen project. No claim is made that the ticker is unused or exclusive.
