@@ -49,7 +49,7 @@ const report = {
   files, archive: '.publication/problem-pinata-solvepop.zip',
   bytes: statSync(archive).size, sha256: createHash('sha256').update(bytes).digest('hex'),
   limits: 'Pattern scan, not proof that all secrets are absent; excludes ignored local files by construction.',
-  blockers: ['GitHub authentication required', 'Expected make.fun handle differs from authenticated handle', 'Actual owner/repository badges and eligibility checks pending'],
+  blockers: ['Actual launched coin and LAUNCH.json pending', 'Expected make.fun handle differs from authenticated handle; confirm before entry', 'Launch funding and final submission approval pending'],
 };
 writeFileSync(join(output, 'publication-audit.json'), JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report, null, 2));

@@ -3,7 +3,8 @@
 [![make.fun bounty](https://make.fun/badge/makefun-coin-promo-01.svg)](https://make.fun/bounty/makefun-coin-promo-01)
 
 <!-- makefun-repository-badges:start -->
-<!-- Actual owner and repository are required before adding rank/reward badges. -->
+[![rank](https://make.fun/badge/makefun-coin-promo-01/ikomahate/makefun-solvepop/rank.svg)](https://make.fun/bounty/makefun-coin-promo-01/leaderboard)
+[![reward](https://make.fun/badge/makefun-coin-promo-01/ikomahate/makefun-solvepop/reward.svg)](https://make.fun/bounty/makefun-coin-promo-01)
 <!-- makefun-repository-badges:end -->
 
 **The prize is inside the problem.**
@@ -59,14 +60,11 @@ directories and are never launch evidence.
   entry eligibility. At least five assistant turns and
   genuine source revisions are required; this session includes actual writes,
   execution and subsequent validation changes. Do not fabricate missing evidence.
-- Create an entrant-owned public GitHub repository after the opening, or use the
-  kit's properly anchored source-bundle workflow. This local folder is not yet an
-  eligible remote repository or anchored source bundle.
-- Add the repository-specific live rank and reward badges using the actual
-  GitHub owner/repository. They are deliberately absent here because neither is
-  known. This README is therefore a preparation README, not submission-ready.
-- Set GitHub About website to the bounty URL and topics to `makefun`, `ai-agents`,
-  `bounties`, and `growth`; add owner proof if the account/repository needs it.
+- Public repository: https://github.com/ikomahate/makefun-solvepop . Its live
+  rank/reward badges are filled in above. The About website is the bounty URL,
+  with topics `makefun`, `ai-agents`, `bounties`, and `growth`.
+- Public wallet owner proof is in .makefun/owner.json. Account/entry ownership
+  is still verified by make.fun at submission; this file signs nothing.
 - After separate explicit approval, the agent must launch autonomously within
   the official window. Put the actual mint and creation signature in LAUNCH.json.
 - Set the coin website to https://make.fun/bounty/makefun-coin-promo-01 and retain
@@ -109,3 +107,8 @@ See [the compliance review](docs/COMPLIANCE.md) for passed checks and missing it
 The earlier BOTPAY draft is preserved in ordinary Git history and native logs.
 The current candidate changes the central story and visual, rather than simply
 renaming the old robot. SOLVEPOP is not guaranteed to be unique or a winning entry.
+
+Sanitized validation reports are in [public-evidence](public-evidence/README.md).
+Raw private sessions, private evidence bundles, credentials and local tools are
+not published. This repository remains an unlaunched preparation until the
+outstanding launch and submission steps are explicitly approved and completed.

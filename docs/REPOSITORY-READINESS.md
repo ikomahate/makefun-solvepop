@@ -1,8 +1,10 @@
 # Public repository preparation
 
-Candidate repository name: problem-pinata-solvepop. No public repository has been
-created and no remote is configured. The user authorized public preparation, but
-GitHub authentication and the make.fun account discrepancy must be resolved first.
+Public repository: https://github.com/ikomahate/makefun-solvepop . GitHub API
+confirmed owner ikomahate, visibility PUBLIC and creation at 2026-11-16T04:40:34Z,
+after the bounty opened. The user explicitly authorized creation and publication.
+Source is pushed only after the publication audit. The make.fun account discrepancy
+remains for confirmation before a future entry; no account was switched or renamed.
 
 ## Official account verification
 
@@ -33,7 +35,10 @@ query is not a transaction quote or authorization to use either signer.
 
 Portable official GitHub CLI is installed under ignored .tools/gh. Its archive
 digest was checked against the official cli/cli release metadata. `gh auth status`
-reports no authenticated GitHub hosts. No create, push or publication was attempted.
+and `gh api user` now verify active login ikomahate. Git authentication is configured.
+The repository-specific README badges, About homepage/topics and public wallet
+owner proof are prepared. Raw sessions and private transcript bundles are not
+included in the public repository.
 
 scripts/prepare-public-repo.mjs inspects all reachable Git history for forbidden
 private paths and common credential patterns, then exports only clean committed
@@ -47,7 +52,15 @@ tests and genuine native development evidence are retained. Raw evidence is not
 part of the public repository export. Official redacted transcript evidence is
 reserved for a separately approved bounty submission.
 
-## Remaining steps after authentication/account resolution
+## Completed authentication and remaining entry work
+
+GitHub authentication, repository creation, About settings, badges and public
+wallet ownership proof are now prepared. The checklist below records the original
+workflow; verification of published files follows the audited push. Before a future
+entry, resolve the make.fun handle discrepancy, fund the approved launch, and
+produce genuine launch evidence. No entry or blockchain transaction is authorized.
+
+## Original preparation checklist (historical)
 
 1. Authenticate GitHub with the portable gh CLI, without printing tokens:
    `.\.tools\gh\bin\gh.exe auth login --hostname github.com --web --git-protocol https`

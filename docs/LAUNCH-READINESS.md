@@ -105,12 +105,13 @@ automatically available as an agent signer. No key material was printed.
 Current public evidence: evidence/wallet-linkage-verified.json. The earlier
 unauthenticated failure remains as historical evidence/wallet-linkage-check.txt.
 
-`git remote -v` returns no remote. Local history is genuine and retained, but
-there is no public GitHub URL to check for creation time, owner, visibility or
-reachable commit. MIT SPDX license and main.ts are present. README has the
-competition badge; rank/reward badges require the actual owner/repository.
-GitHub About and conditional .makefun/owner.json remain pending. The drand
-source-bundle alternative is not prepared by the current ordinary Git history.
+Update: GitHub authenticates as ikomahate. The explicitly authorized PUBLIC
+repository https://github.com/ikomahate/makefun-solvepop was created at
+2026-11-16T04:40:34Z, after the opening. README badges are filled in, About is
+configured, and .makefun/owner.json names the verified linked public wallet.
+Remote file/commit checks follow the audited push. See REPOSITORY-READINESS.md.
+Raw sessions and private evidence are excluded. The drand source-bundle route
+remains unused.
 
 ## Metadata, runtime and evidence
 

@@ -18,14 +18,14 @@ creativity, make.fun promotion, packaging. Local files cannot replace a real coi
 | Offline deterministic execution | Two isolated runs compared in tests under Node permissions |
 | Actual LAUNCH.json copied to /output | Shape-valid synthetic fixtures test copy behavior; genuine record absent |
 | MIT license | LICENSE present with the SPDX-License-Identifier: MIT line required by the local checker |
-| Entrant-owned public repository created after opening | Local Git repository only; remote creation/ownership unverified |
-| Required README live badges | Competition badge present; rank/reward need actual owner/repository; local helper prepared |
-| GitHub About and wallet owner proof if applicable | Pending actual account/repository |
+| Entrant-owned public repository created after opening | Target ikomahate/makefun-solvepop; GitHub API verification recorded privately |
+| Required README live badges | Competition, repository rank and repository reward badges present |
+| GitHub About and wallet owner proof if applicable | Bounty homepage/topics configured; public linked-wallet owner proof present |
 | Genuine native development sessions | Native logs and prior Git commits preserved; final bundle includes the rebrand sessions |
 | Run record | Official bundler derives the original prompt and harness data; current result in evidence/official-check.json |
 | Recorded revisions and tests | Real writes, execution, validation changes and test results in native sessions |
 | Exact pinned sandbox container | Not run: Docker unavailable; Windows Node tests do not prove Linux container behavior |
-| Linked wallet and funded launch capacity | Unverified; wallet secrets never accessed |
+| Linked wallet and funded launch capacity | Linkage verified; observed balances do not establish adequate launch funding |
 | Pump.fun launch inside the window | Pending explicit launch/signing/spending approval |
 | On-chain finalized successful creation and linked creator | Pending actual launch; shape tests prove none of this |
 | Signed entry and submission | Pending separate explicit approval |
