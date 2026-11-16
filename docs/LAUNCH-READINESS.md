@@ -1,9 +1,11 @@
 # Launch readiness: frozen Problem Pinata / SOLVEPOP
 
 Reviewed November 16, 2026, approximately 04:12 UTC (11:12 Bangkok).
-**Not ready to launch: funding/sponsorship, wallet linkage and repository are
-unverified. No launch, signing, spending, authentication signature or submission
-was performed.** Identity, logo, code and draft metadata are frozen by SHA-256
+**Update: account connection and wallet linkage verified through the official CLI
+on November 16, 2026 at approximately 04:21 UTC. Funding/sponsorship and repository
+eligibility remain unverified. No blockchain transaction was signed, no SOL spent,
+and no launch or submission performed.** The approved login used off-chain
+authentication. Identity, logo, code and draft metadata are frozen by SHA-256
 in concept.freeze.json. The display name uses PIÑATA; the existing token metadata
 keeps the ASCII name PROBLEM PINATA. No branding bytes were changed.
 
@@ -52,7 +54,7 @@ Primary sources:
 ## Minimum actual SOL: what can and cannot be established now
 
 **An exact executable minimum has not been established.** There is no actual
-public wallet, sponsored-payer agreement, uploaded metadata URI or unsigned
+selected funded payer, sponsored-payer agreement, uploaded metadata URI or unsigned
 launch transaction to inspect/simulate. An arbitrary fixed number would be a
 budget estimate, not the minimum actual debit.
 
@@ -89,15 +91,19 @@ trade fee as the actual quote charges it; do not count included fees twice.
 
 ## Wallet and repository checks
 
-The inspected CLI's `wallet list` branch performs only GET /api/me/wallets and
-never loads a signing keypair. Running it failed because no make.fun API key
-is configured. It did not log in, register, sign or reveal a wallet secret.
-Result saved at evidence/wallet-linkage-check.txt.
+The user approved the official CLI connection. Login completed as
+@hazel-kestrel-73, account 01a1e23b-f56e-72bd-b115-f08398685f06.
+The official read-only `wallet list --json` then verified:
 
-No public wallet address or make.fun username has been supplied, so wallet
-identity, SOL balance and account linkage cannot be verified. A connector wallet
-or public balance alone would not prove make.fun linkage. The user was asked
-for public identifiers only; no API key or secret phrase was requested.
+- Primary linked sign-in wallet: BcUhPeydu8qbdinNTg5rhyyyzyaJgKD4QB8uZCCFgUzE
+- Connected agent wallet: HBo9cpkxSnaCjxqxsqTrebAbXtziqiZYwdox9qkjaK1P
+
+The first is kind linked, primary true, signs_in true. The second is kind agent,
+primary false, signs_in false. Neither balance was checked by wallet listing.
+Launch-payer selection and funding remain unverified; the linked wallet is not
+automatically available as an agent signer. No key material was printed.
+Current public evidence: evidence/wallet-linkage-verified.json. The earlier
+unauthenticated failure remains as historical evidence/wallet-linkage-check.txt.
 
 `git remote -v` returns no remote. Local history is genuine and retained, but
 there is no public GitHub URL to check for creation time, owner, visibility or
@@ -132,9 +138,9 @@ source-bundle alternative is not prepared by the current ordinary Git history.
 
 ## Deadline-prioritized remaining work
 
-1. Obtain public wallet, make.fun username/account view and intended repository
-   URL; verify linkage through an already authenticated read-only route. If none
-   is available, the user's account setup is the blocker. No login signature now.
+1. Account/wallet linkage is now verified. Obtain the intended repository URL,
+   select the authorized launch payer and verify its balance read-only. Agent
+   wallet linkage does not establish that the primary wallet can be used to sign.
 2. Choose a verified funded payer or a full sponsor covering fees AND deposits.
    Preserve the linked creator field and autonomous agent launch. Without a
    sponsor, do not plan around a 0-SOL creator wallet.

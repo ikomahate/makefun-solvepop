@@ -1,5 +1,6 @@
 output/
 .tools/
+.publication/
 evidence/
 .test-output/
 evidence/*-kit/
