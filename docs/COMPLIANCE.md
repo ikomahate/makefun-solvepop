@@ -17,12 +17,12 @@ creativity, make.fun promotion, packaging. Local files cannot replace a real coi
 | main.ts, Node 22, standard library only | Implemented; runs under portable Node 22.23.5 and Node 26.12.1 |
 | Offline deterministic execution | Two isolated runs compared in tests under Node permissions |
 | Actual LAUNCH.json copied to /output | Shape-valid synthetic fixtures test copy behavior; genuine record absent |
-| MIT license | LICENSE present |
+| MIT license | LICENSE present with the SPDX-License-Identifier: MIT line required by the local checker |
 | Entrant-owned public repository created after opening | Local Git repository only; remote creation/ownership unverified |
 | Required README live badges | Competition badge present; rank/reward need actual owner/repository; local helper prepared |
 | GitHub About and wallet owner proof if applicable | Pending actual account/repository |
-| Genuine native development sessions | Found and supplied to the official bundle tool; no hand-written transcript |
-| Run record | Official bundler derives opening prompt and native harness data; inspect actual local check output |
+| Genuine native development sessions | Official bundle created locally from two native Codex sessions; no hand-written transcript |
+| Run record | Official local check passed for opening prompt, harness, model, usage and tool declarations |
 | Recorded revisions and tests | Real writes, execution, validation changes and test results in native sessions |
 | Exact pinned sandbox container | Not run: Docker unavailable; Windows Node tests do not prove Linux container behavior |
 | Linked wallet and funded launch capacity | Unverified; wallet secrets never accessed |
@@ -33,6 +33,10 @@ creativity, make.fun promotion, packaging. Local files cannot replace a real coi
 The official check tool's results, when available, are retained locally in
 evidence/official-check.json. A successful bundle is only evidence packaging,
 not proof that every check passed or the entry is launch/submission-ready.
+The first official check identified a missing SPDX line in LICENSE; it was
+corrected in recorded development before the final local check. Native-session
+timestamps, recorded usage, authored source lines and actual revisions passed
+the first check. Final check details and hashes are in the evidence directory.
 
 Deadline: November 17, 2026 06:00 UTC / 13:00 Bangkok. The brief limits entries
 to 5 per UTC day and 10 total, subject to applicable lower account/country caps.

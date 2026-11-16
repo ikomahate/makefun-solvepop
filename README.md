@@ -91,9 +91,11 @@ The official window is November 15, 2026 06:00 UTC through November 17, 2026
 The 512 × 512 PNG is below the official 5 MiB and 16-megapixel image caps.
 
 `evidence/` contains fetched official materials, local test results and a native
-session snapshot. These are preparation records, not a submitted or verified
-transcript bundle. Keep the native logs private until reviewed and redacted by
-the official bundler. The native log continues after any snapshot is made.
+session snapshot. It also contains the official CLI's locally generated,
+redacted preparation transcript bundle and pre-submit check report. Nothing
+was uploaded. Keep raw native logs private; they are excluded from Git. The
+native log continues after any snapshot or bundle is made, so bundle again
+after an eventual approved launch and before an approved submission.
 
 MIT licensed; see LICENSE.
 
