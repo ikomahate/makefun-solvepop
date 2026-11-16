@@ -21,13 +21,15 @@ const patterns = [
 const findings = [];
 const objects = call(['rev-list', '--objects', '--all']).trim().split('\n');
 let blobs = 0;
+let commitAndTagObjects = 0;
 for (const row of objects) {
   const split = row.indexOf(' '), id = split < 0 ? row : row.slice(0, split);
   const path = split < 0 ? '' : row.slice(split + 1);
   if (path && forbidden.test(path)) findings.push({ path, check: 'forbidden-history-path' });
-  if (call(['cat-file', '-t', id]).trim() !== 'blob') continue;
-  blobs++;
-  const content = call(['cat-file', 'blob', id], true).toString('latin1');
+  const kind = call(['cat-file', '-t', id]).trim();
+  if (!['blob', 'commit', 'tag'].includes(kind)) continue;
+  if (kind === 'blob') blobs++; else commitAndTagObjects++;
+  const content = call(['cat-file', '-p', id], true).toString('latin1');
   for (const [check, pattern] of patterns)
     if (pattern.test(content)) findings.push({ path, check });
 }
@@ -46,6 +48,7 @@ const bytes = call(['archive', '--format=zip', 'HEAD'], true);
 const report = {
   format: 'local-publication-audit/1', ok: true, published: false,
   commit: call(['rev-parse', 'HEAD']).trim(), scanned_history_blobs: blobs,
+  scanned_commit_and_tag_objects: commitAndTagObjects,
   files, archive: '.publication/problem-pinata-solvepop.zip',
   bytes: statSync(archive).size, sha256: createHash('sha256').update(bytes).digest('hex'),
   limits: 'Pattern scan, not proof that all secrets are absent; excludes ignored local files by construction.',

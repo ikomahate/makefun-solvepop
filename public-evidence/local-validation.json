@@ -1,0 +1,132 @@
+{
+    "format":  "sanitized-validation-summary/1",
+    "source_commit":  "09a4fd5ae6c3080a890314e8c4018c733d6bcfc8",
+    "project":  "PROBLEM PINATA",
+    "symbol":  "SOLVEPOP",
+    "tests":  {
+                  "node22":  {
+                                 "version":  "22.23.5",
+                                 "failed":  0,
+                                 "passed":  8
+                             },
+                  "node26":  {
+                                 "version":  "26.12.1",
+                                 "failed":  0,
+                                 "passed":  8
+                             }
+              },
+    "official_local_check":  {
+                                 "checks":  [
+                                                {
+                                                    "check":  "prerequisites",
+                                                    "status":  "skip"
+                                                },
+                                                {
+                                                    "check":  "competition_open",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "snapshot",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "license_osi",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "entrypoint",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "strategy_note",
+                                                    "status":  "skip"
+                                                },
+                                                {
+                                                    "check":  "committed_secret",
+                                                    "status":  "skip"
+                                                },
+                                                {
+                                                    "check":  "transcripts_present",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "transcripts_recorded",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "thinking_wellformed",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "thinking_in_window",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "thinking_committed",
+                                                    "status":  "skip"
+                                                },
+                                                {
+                                                    "check":  "thinking_reproduces",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "thinking_on_task",
+                                                    "status":  "skip"
+                                                },
+                                                {
+                                                    "check":  "thinking_turns",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "thinking_priced",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "thinking_revised",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "thinking_fresh",
+                                                    "status":  "skip"
+                                                },
+                                                {
+                                                    "check":  "transcripts_run_record",
+                                                    "status":  "pass"
+                                                },
+                                                {
+                                                    "check":  "thinking_launch",
+                                                    "status":  "skip"
+                                                },
+                                                {
+                                                    "check":  "repo_public",
+                                                    "status":  "submission"
+                                                },
+                                                {
+                                                    "check":  "repo_owner",
+                                                    "status":  "submission"
+                                                },
+                                                {
+                                                    "check":  "repo_created_after_open",
+                                                    "status":  "submission"
+                                                },
+                                                {
+                                                    "check":  "commit_in_repo",
+                                                    "status":  "submission"
+                                                },
+                                                {
+                                                    "check":  "duplicate_snapshot",
+                                                    "status":  "submission"
+                                                }
+                                            ],
+                                 "ok":  true
+                             },
+    "scope":  "Offline preparation and transcript validation only; not a live token or accepted submission.",
+    "private_material":  "Native sessions and transcript bundles retained privately; not included in this repository.",
+    "limitations":  [
+                        "No genuine LAUNCH.json or live token",
+                        "Public image/metadata URIs pending",
+                        "Docker container not tested",
+                        "Expected make.fun handle differs from authenticated handle",
+                        "Official CLI download reports level 17 while server advertises level 18; refresh before entry"
+                    ]
+}
