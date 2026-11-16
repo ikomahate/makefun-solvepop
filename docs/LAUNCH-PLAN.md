@@ -1,5 +1,9 @@
 # Problem Pinata / SOLVEPOP launch plan - pending explicit approval
 
+The concept is frozen in concept.freeze.json. See LAUNCH-READINESS.md for the
+latest sponsorship findings, live rent observations and unresolved exact minimum.
+The allowances below are budgets, not a verified minimum SOL requirement.
+
 Nothing in this document authorizes any signature, spending, launch or entry.
 No wallet secrets are read by this project. Approval of this plan is separate
 from an actual transaction approval and separate from bounty submission.

@@ -1,0 +1,15 @@
+{
+  "format": "makefun-concept-freeze/1",
+  "display_name": "PROBLEM PIÑATA",
+  "token_name": "PROBLEM PINATA",
+  "symbol": "SOLVEPOP",
+  "hook": "The prize is inside the problem.",
+  "source_commit": "5dd35380d15b63604ad9a60606fcceac3a5d70cd",
+  "files": {
+    "main.ts": "34e7c32ed933de07da24baf10cf98e2bf7df739711c79deb32c236e58d5044db",
+    "logo.png": "20198fcc4cd169a9aea6a75efff2bd36d3ea8dc04f1a6252d53ca02773622c12",
+    "metadata.draft.json": "5602dba5591cc9d7789d697743a4b2b4e3bdfa8e1cb8ec648588e62690b71f46"
+  },
+  "launch_metadata_note": "Preserve the frozen identity, logo and description. The actual uploaded metadata must replace the local image filename with the verified public image URI. Record that resulting metadata hash separately before approval.",
+  "authorization": "No launch, signing, spending or submission is authorized by this freeze."
+}
