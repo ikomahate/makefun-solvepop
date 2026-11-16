@@ -1,0 +1,28 @@
+{
+    "format":  "launch-readiness-summary/1",
+    "checked_at_utc":  "2026-11-16T05:19:26.7967534+00:00",
+    "account":  "hazel-kestrel-73",
+    "primary_wallet":  "BcUhPeydu8qbdinNTg5rhyyyzyaJgKD4QB8uZCCFgUzE",
+    "account_linkage_verified":  true,
+    "competition_status":  "open",
+    "deadline":  "2026-11-17T06:00:00.000Z",
+    "metadata_uri":  "https://raw.githubusercontent.com/ikomahate/makefun-solvepop/068916f2e8c6f5ce500dcc78e7c8b22f057ce0ff/token-metadata.json",
+    "image_uri":  "https://raw.githubusercontent.com/ikomahate/makefun-solvepop/59781d5817b8e440556c807ddb3544fa548d482e/logo.png",
+    "cost_quote_at":  "2026-11-16T05:11:43.261Z",
+    "estimated_spend_lamports":  6009480,
+    "priority_fee_lamports":  0,
+    "optional_buy_lamports":  0,
+    "unspent_payer_reserve_lamports":  650240,
+    "target_balance_lamports":  6659720,
+    "observed_balance_lamports":  2354497,
+    "funding_shortfall_lamports":  4305223,
+    "launch_exists":  false,
+    "submitted":  false,
+    "simulation":  "Unsigned actual create-only draft failed for insufficient funds; diagnostic VM-only funding allowed completion and cost measurement. No funds moved.",
+    "remaining":  [
+                      "Funding and authorized primary-wallet signer",
+                      "Explicit transaction confirmation",
+                      "Actual token and LAUNCH.json",
+                      "Final entry signature and complete submission approval"
+                  ]
+}

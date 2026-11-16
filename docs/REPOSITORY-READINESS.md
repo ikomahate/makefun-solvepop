@@ -3,8 +3,9 @@
 Public repository: https://github.com/ikomahate/makefun-solvepop . GitHub API
 confirmed owner ikomahate, visibility PUBLIC and creation at 2026-11-16T04:40:34Z,
 after the bounty opened. The user explicitly authorized creation and publication.
-Source is pushed only after the publication audit. The make.fun account discrepancy
-remains for confirmation before a future entry; no account was switched or renamed.
+Source is pushed only after the publication audit. Account linkage is verified;
+the user instructed use of this existing account and primary wallet. No account
+was switched or renamed.
 
 ## Official account verification
 
@@ -15,9 +16,9 @@ The official CLI's authenticated status and wallet-list endpoints report:
 - Primary linked wallet: BcUhPeydu8qbdinNTg5rhyyyzyaJgKD4QB8uZCCFgUzE.
 - Connected agent wallet: HBo9cpkxSnaCjxqxsqTrebAbXtziqiZYwdox9qkjaK1P.
 
-The linked wallet matches the prefix of the expected wallet-derived handle.
-This does not prove the handles are aliases. No account was renamed, merged or
-reconnected. The user was asked whether to use this existing account or reconnect.
+The official status and wallet-list endpoints agree on the account ID. The user
+subsequently instructed use of this existing account and primary wallet, so no
+reconnect or rename is needed.
 Private account-home output is retained only under ignored evidence/.
 
 ## Read-only funding check
